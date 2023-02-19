@@ -1,0 +1,88 @@
+.todoItem {
+  padding: 5px 10px;
+  display: flex;
+  user-select: none;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 2px 1px #d3d3dd;
+}
+.addTodo {
+  padding: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.todoContainer {
+  border-radius: 20px;
+  border: 1px solid #f1f1f1;
+  padding: 20px;
+}
+
+.deleteButton {
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  background-color: #f20000;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.cancelButton {
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.addButton {
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.todoInput {
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  border: 1px solid #d3d3dd;
+}
+
+.Completed {
+  text-decoration: line-through;
+}
+.notCompleted {
+  text-decoration: none;
+}
+
+.deleteModalContainer {
+  position: fixed;
+  position: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 240, 240, 0.6);
+
+}
+.deleteModalContent {
+  width: 400px;
+  padding: 70px 20px;
+  background: white;
+}
+
+.deleteModalButtonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
