@@ -1,6 +1,4 @@
 import {createSlice } from '@reduxjs/toolkit';
-import { todos } from '../../Data/todos';
-
 const initialState = {
   todos: localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")): [],
   currentTodo: {},
