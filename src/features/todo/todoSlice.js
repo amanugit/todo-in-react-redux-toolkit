@@ -5,8 +5,6 @@ const initialState = {
   isDeleteModalOPen: false,
 };
 
-
-
 export const todoSlice = createSlice({
   name: 'todo',
   initialState: initialState, 
@@ -35,6 +33,4 @@ export const todoSlice = createSlice({
 });
 
 export const { addTodo, deleteTodo, updateTodo, openDeleteModal, closeDeleteModal } = todoSlice.actions;
-
-
 export default todoSlice.reducer;

@@ -9,7 +9,7 @@ export function Todo({ item }) {
             isDeleteModalOPen: true,
         }));
     }
-
+    
     const onToggleTodo = (todo) => {
         dispatch(updateTodo({
             todo, 

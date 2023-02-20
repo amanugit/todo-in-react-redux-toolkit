@@ -6,15 +6,7 @@ export function AddTodo() {
     const [todo, setTodo] = useState("");
     const dispatch = useDispatch();
     const selectTodods = useSelector(state =>  state.todo.todos);
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const newTodo = {
-        id: selectTodods.length + 1,
-        name: todo,
-        date_added: months[new Date().getMonth()] + " " + new Date().getDate() + ", " + new Date().getFullYear(),
-        isCompleted: false
-    }
 
-    
     const onAddTodo = () => {
         if(!todo) {
             alert("Please enter todo ");
@@ -23,6 +15,13 @@ export function AddTodo() {
         if(selectTodods.find(item =>  item.name.toLowerCase() === todo.toLowerCase() )) {
             alert("Task with this name already existed ");
             return;
+        }
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const newTodo = {
+            id: selectTodods.length + 1,
+            name: todo,
+            date_added: months[new Date().getMonth()] + " " + new Date().getDate() + ", " + new Date().getFullYear(),
+            isCompleted: false
         }
         dispatch(addTodo(newTodo));
         setTodo("");
