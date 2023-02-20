@@ -1,7 +1,9 @@
 import styles from './Todo.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteTodo, closeDeleteModal } from './todoSlice';
-export function DeleteMdoal({currentTodo}) {
+export function DeleteMdoal() {
+    const selectIsDeleteModalOPen = useSelector(state => state.todo.isDeleteModalOPen);
+    const selectCurrentTodo = useSelector(state => state.todo.currentTodo);
     const dispatch = useDispatch();
     const handelDeleteTodo = () => {
         dispatch(deleteTodo(currentTodo));
@@ -13,7 +15,7 @@ export function DeleteMdoal({currentTodo}) {
             isDeleteModalOPen: false
         }));
     }
-    return (
+    return selectIsDeleteModalOPen ? (
         <div className={styles.deleteModalContainer}>
             <div className={styles.deleteModalContent}>
                 <h5>Are you sure you want to delete {currentTodo.name} ?</h5>
@@ -23,5 +25,5 @@ export function DeleteMdoal({currentTodo}) {
                 </div>
             </div>
         </div>
-    )
+    ) : null
 }
